@@ -1,0 +1,28 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f0f0f0;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.btn-primary {
+    width: 170px;
+}
+
+.btn {
+    border-radius: 360px;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.btn-blue {
+    background-color: #2362B7;
+}

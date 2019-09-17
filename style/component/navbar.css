@@ -1,0 +1,12 @@
+.bg-dark {
+    background: #000 !important;
+}
+
+.nav-item {
+    padding: 1.5rem;
+    text-transform: uppercase;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
