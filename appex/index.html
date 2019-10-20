@@ -24,18 +24,16 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active p-2">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" id="scrollToHome">Home</a>
+                    </li>
+                    <li class="nav-item active p-2">
+                        <a class="nav-link" id="scrollToFeatures">Features</a>
+                    </li>
+                    <li class="nav-item active p-2">
+                        <a class="nav-link" id="scrollToAbout">Team</a>
                     </li>
                     <li class="nav-item p-2">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item p-2">
-                        <a class="nav-link" href="#">Team</a>
-                    </li>
-                    <li class="nav-item p-2">
-                        <a href="#">
-                            <button class="btn btn-outline-primary">Download</button>
-                        </a>
+                        <button class="btn btn-outline-primary">Download</button>
                     </li>
                 </ul>
             </div>
@@ -43,18 +41,15 @@
     </nav>
     <!-- navbar end -->
     <!-- home start -->
-    <section class="home">
+    <section class="home" id="home">
         <img src="images/start-up.png" alt="illustration">
         <h1>Pry. Discover. Enjoy</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium ea aut necessitatibus
-            ipsanobis.</p>
-        <a href="#">
-            <button class="btn btn-primary">Features</button>
-        </a>
+        <p>Open your eyes look up to the skies and see...</p>
+        <button id="scrollToFeature" class="btn btn-primary">Features</button>
     </section>
     <!-- home end -->
     <!-- features start -->
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -70,7 +65,9 @@
                     <p>Safety</p>
                 </div>
             </div>
-            <h2>Used technologies</h2>
+            <span>
+                Used technologies
+            </span>
             <div class="row features-tech">
                 <div class="col-md-4">
                     <img src="images/flutterLogo.png" alt="flutter">
@@ -89,18 +86,18 @@
     </section>
     <!-- features end -->
     <!-- about start -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="about-block p-5 mt-5 mb-5">Team Members</div>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="images/avatars/nurali.jpg" alt="avatar">
+            <div class="row about-col">
+                <div class="col-md-6">
+                    <img src="images/avatar.jpg" alt="">
                 </div>
-                <div class="col-md-4">
-                    <img src="images/avatars/karim.jpg" alt="avatar">
-                </div>
-                <div class="col-md-4">
-                    <img src="images/avatars/chingiz.jpg" alt="avatar">
+                <div class="col-md-6">
+                    <span>Team roles</span>
+                    <p>Nurali Sadibekov - Frontend Engineer</p>
+                    <p>Chingiz Maripbekov - Full Stack Developer</p>
+                    <p>Nauruzov Karim - Team Lead</p>
                 </div>
             </div>
         </div>
@@ -113,9 +110,10 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
