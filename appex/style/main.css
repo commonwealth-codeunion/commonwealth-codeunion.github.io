@@ -2,6 +2,15 @@
     width: 35px;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white,
+}
+
 .home {
     position: relative;
     width: 100%;
