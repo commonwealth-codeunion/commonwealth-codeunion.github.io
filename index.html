@@ -2,112 +2,107 @@
 <html lang="en">
 
 <head>
-    <!-- meta tag -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Sadibekov && Maripbekov">
-    <meta name="describe" content="code union - commonwealth of developers">
-    <!-- title -->
-    <title>Code Union</title>
-    <!-- css -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="style/all.css">
+    <title>Appex | Let's Discover | Code Union</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
-    <div id="home"></div>
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="image/logo.png" alt="logo" width="35px">
+                <img src="images/appexLogo.png" alt="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ml-5">
-                        <a class="nav-link" href="#home">Home</a>
+                    <li class="nav-item active p-2">
+                        <a class="nav-link" href="#">Home</a>
                     </li>
-                    <li class="nav-item ml-5">
-                        <a class="nav-link" href="#about">About</a>
+                    <li class="nav-item p-2">
+                        <a class="nav-link" href="#">Features</a>
                     </li>
-                    <li class="nav-item ml-5">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <li class="nav-item p-2">
+                        <a class="nav-link" href="#">About</a>
                     </li>
-                    <li class="nav-item ml-5">
-                        <a class="nav-link" href="#contact">Contact</a>
+                    <li class="nav-item p-2">
+                        <a href="#">
+                            <button class="btn btn-outline-primary">Download</button>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <div class="home">
-        <div class="home-block">
-            <img src="image/leaves.png" alt="illustration" width="100">
-            <h1>./codeunion</h1>
-            <p>We are together. We are unity.<br>We are union.</p>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-blue"><img src="image/arrow.png" alt="arrow" width="20"></button>
-                <button type="button" class="btn btn-primary">About Us</button>
-            </div>
-        </div>
-        <div class="btn-support animated heartBeat infinite">
-            <a href="mailto:tech.codeunion@gmail.com"><img src="image/icon/gmail.svg" alt="icon-support"
-                    width="50px"></a>
-        </div>
-    </div>
-
-    <section class="about" id="about">
+    <!-- navbar end -->
+    <!-- home start -->
+    <section class="home">
+        <img src="images/start-up.png" alt="illustration">
+        <h1>Pry. Discover. Enjoy</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium ea aut necessitatibus
+            ipsanobis.</p>
+        <a href="#">
+            <button class="btn btn-primary">Features</button>
+        </a>
+    </section>
+    <!-- home end -->
+    <!-- features start -->
+    <section class="features">
         <div class="container">
-            <div class="about-block">
-                <div class="de-line"></div>
-                <h3>About</h3>
-                <p>Code Union is a small IT startup based in Kazakhstan, Almaty. Our first goal is to get good
-                    impressions from hightech technologies like Robotics, Web Development, Software Engineering</p>
-                <div class="de-line"></div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/icons/github.png" alt="github">
+                    <p>Open source project</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/icons/tap.png" alt="tap">
+                    <p>Multifunctional</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/icons/shield.png" alt="shield">
+                    <p>Safety</p>
+                </div>
             </div>
-        </div>
-
-        <div class="container">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xl-3 col-md-6">
-                        <img src="image/icon/android.jpg" alt="icon">
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <img src="image/icon/android.jpg" alt="icon">
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <img src="image/icon/android.jpg" alt="icon">
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <img src="image/icon/android.jpg" alt="icon">
-                    </div>
+            <h2>Used technologies</h2>
+            <div class="row features-tech">
+                <div class="col-md-4">
+                    <img src="images/flutterLogo.png" alt="flutter">
+                    <h1>Flutter</h1>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/dart.png" alt="nasa">
+                    <h1>Dart PL</h1>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/nasaLogo.png" alt="dart">
+                    <h1>eyes.nasa.gov</h1>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-
-        </div>
+    <!-- features end -->
+    <!-- about start -->
+    <section class="about">
+        <div class="about-block p-5 mt-5 mb-5">TEAM MEMBERS</div>
     </section>
+    <!-- about end -->
 
 
 
 
 
-    <!-- js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
