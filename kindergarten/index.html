@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Главная</a>
+                        <a class="nav-link" id="goToHome" href="#">Главная</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="goToAbout" href="#">О нас</a>
@@ -65,7 +65,7 @@
         <div class=" container">
         <div class="row">
             <h4>Оставьте заявку прямо сейчас</h4>
-            <a class="ml-auto" href="#" id="goToApply">
+            <a class="ml-auto" href="#" id="goToApply-3">
                 <button class="btn btn-light">Записаться</button>
             </a>
         </div>
@@ -123,26 +123,26 @@
             <img src="images/illustration.jpg" width="100%" alt="Детский сад">
         </div>
         <div class="col-md-6">
-            <ul class="nav nav-pills mb-3 m-3" id="pills-tab" role="tablist p-3">
-                <li class="nav-item">
-                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                        aria-controls="pills-home" aria-selected="true">Забота</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                        aria-controls="pills-profile" aria-selected="false">Забота</a>
-                </li>
-            </ul>
+            <a class="pill" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                aria-controls="pills-home" aria-selected="true">Забота</a>
+            <a class="pill" id="pills-home-tab" data-toggle="pill" href="#pills-second" role="tab"
+                aria-controls="pills-second" aria-selected="false">Обучение</a>
+            <a class="pill" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                aria-controls="pills-profile" aria-selected="false">Развитие</a>
             <h3 style="text-transform: none;">Мы предлагаем</h3>
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Corporis ea dolores totam aspernatur iure deleniti id voluptates porro dolorum debitis?</div>
+                <div class="tab-pane fade" id="pills-second" role="tabpanel" aria-labelledby="pills-second-tab">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laboriosam ipsa fuga
+                    dolorem aut laborum reprehenderit voluptatem.</div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laboriosam ipsa fuga
                     dolorem aut laborum reprehenderit voluptatem nostrum consectetur delectus.</div>
+
             </div>
-            <a href="#">
+            <a href="#" id="goToApply-4">
                 <button class="btn btn-outline-primary">Записаться</button>
             </a>
         </div>
@@ -236,7 +236,7 @@
                 </div>
             </div>
         </div>
-        <a href="#" id="goToApply">
+        <a href="#" id="goToApply-5">
             <button class="btn btn-primary">Оставить заявку</button>
         </a>
     </div>
@@ -271,12 +271,12 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <select multiple class="form-control" id="exampleFormControlSelect2">
-                                <option>1-2 лет</option>
-                                <option>2-3 лет</option>
-                                <option>3-4 лет</option>
-                                <option>4-5 лет</option>
-                                <option>5-6 лет</option>
+                            <select class="form-control" id="exampleFormControlSelect2">
+                                <option>От 1 до 2 лет</option>
+                                <option>От 2 до 3 лет</option>
+                                <option>От 3 до 4 лет</option>
+                                <option>От 4 до 5 лет</option>
+                                <option>От 5 до 6 лет</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -319,6 +319,12 @@
     <script>
         new WOW().init();
 
+        $("#goToHome").click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".home").offset().top
+            }, 4000);
+        });
+
         $("#goToApply").click(function () {
             $([document.documentElement, document.body]).animate({
                 scrollTop: $(".apply").offset().top
@@ -346,6 +352,24 @@
         $("#goToAbout-2").click(function () {
             $([document.documentElement, document.body]).animate({
                 scrollTop: $(".about").offset().top
+            }, 4000);
+        });
+
+        $("#goToApply-3").click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".apply").offset().top
+            }, 4000);
+        });
+
+        $("#goToApply-4").click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".apply").offset().top
+            }, 4000);
+        });
+
+        $("#goToApply-5").click(function () {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(".apply").offset().top
             }, 4000);
         });
     </script>
