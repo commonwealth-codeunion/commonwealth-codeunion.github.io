@@ -13,11 +13,38 @@
 </head>
 
 <body>
+    <script>
+        const noScroll = () => {
+            window.scroll(0, 0);
+        }
+
+        function loadData() {
+        return new Promise((resolve, reject) => {
+            window.addEventListener('scroll', noScroll);
+            window.addEventListener('load',
+            () => resolve());
+        })
+        }
+
+        loadData()
+        .then(() => {
+            let preloaderEl = document.getElementById('preloader');
+            preloaderEl.classList.add('hidden');
+            preloaderEl.classList.remove('visible');
+            preloaderEl.style.backgroundImage = "none";
+            window.removeEventListener('scroll', noScroll);
+        }); 
+    </script>
+
+    
+    <!-- preloader -->
+    <div id="preloader" class="visible"></div>
+    
     <a href="https://wa.me/77010389899" class="whatsapp-unique pulse">
         <img src="images/whatsapp.png" alt="" width="64">
     </a>
     <!-- navbar start -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">Ясли Сад №8</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -27,17 +54,17 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" id="goToHome" href="#">Главная</a>
+                        <a class="nav-link" onclick="goToSection('home')" href="#home">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="goToAbout" href="#">О нас</a>
+                        <a class="nav-link" onclick="goToSection('about')" href="#about">О нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="goToPlan" href="#">План</a>
+                        <a class="nav-link" onclick="goToSection('plan')" id="goToPlan" href="#plan">План</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" id="goToApply" href="#">Записаться</a>
+                        <a class="nav-link" onclick="goToSection('feedback')" href="#feedback">Записаться</a>
                     </li>
                 </ul>
             </div>
@@ -46,26 +73,27 @@
     <!-- navbar end -->
 
     <!-- home start -->
-    <section class="home">
+    <section id="home">
         <div class="home-title">
             <h3><span>Добро пожаловать</span></h3>
             <h1><span>Лучший детский сад</span></h1>
             <h2><span>Для вашего ребенка</span></h2>
-            <a href="#" id="goToAbout-2">
+            <a href="#" onclick="goToSection('about')" >
                 <button class="btn btn-violet">Подробнее</button>
             </a>
-            <a href="#" id="goToApply-2">
+            <a href="#" onclick="goToSection('feedback')" >
                 <button class="btn btn-orange pulse">Записаться</button>
             </a>
         </div>
     </section>
     <!-- home end -->
 
-    <div class="banner wow fadeInUp data-wow-duration=" 2s" data-wow-delay="1s"">
+    <!-- banner -->
+    <div class="banner wow fadeInUp data-wow-duration=" 1s" data-wow-delay="0.5s"">
         <div class=" container">
         <div class="row">
             <h4>Оставьте заявку прямо сейчас</h4>
-            <a class="ml-auto" href="#" id="goToApply-3">
+            <a class="ml-auto" href="#" onclick="goToSection('feedback')" ">
                 <button class="btn btn-light">Записаться</button>
             </a>
         </div>
@@ -73,8 +101,9 @@
     </div>
 
     <!-- about start -->
-    <div class="container-fluid services-bg wow fadeInUp data-wow-duration=" 2s" data-wow-delay="1s"">
-        <div class=" container services pb-5">
+    <section id="about">
+        <div class="container-fluid services-bg">
+        <div class=" container services pb-5 wow fadeInUp data-wow-duration=" 0.5s" data-wow-delay="0ю5s"">
         <div class="row">
             <div class="col-md-3">
                 <img src="images/icons/1.png" width="50%" alt="Услуги">
@@ -116,132 +145,136 @@
     </div>
     </div>
 
-    <div class="container about pt-5 pb-5 justify-content-center wow fadeInUp data-wow-duration=" 1s"
-        data-wow-delay="0.5s"">
-        <div class=" row">
+    <div class="container about pt-5 pb-5 justify-content-center">
+        <div class="row wow fadeInUp data-wow-duration=" 1s"
+        data-wow-delay="0.5s""">
         <div class="col-md-6">
             <img src="images/illustration.jpg" width="100%" alt="Детский сад">
         </div>
         <div class="col-md-6">
-            <a class="pill" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                aria-controls="pills-home" aria-selected="true">Забота</a>
-            <a class="pill" id="pills-home-tab" data-toggle="pill" href="#pills-second" role="tab"
-                aria-controls="pills-second" aria-selected="false">Обучение</a>
-            <a class="pill" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                aria-controls="pills-profile" aria-selected="false">Развитие</a>
+            <ul class="nav nav-pills mb-3 m-3" id="pills-tab" role="tablist p-3">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Забота</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">Питание</a>
+                </li>
+            </ul>
             <h3 style="text-transform: none;">Мы предлагаем</h3>
             <div class="tab-content" id="pills-tabContent">
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Corporis ea dolores totam aspernatur iure deleniti id voluptates porro dolorum debitis?</div>
-                <div class="tab-pane fade" id="pills-second" role="tabpanel" aria-labelledby="pills-second-tab">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laboriosam ipsa fuga
-                    dolorem aut laborum reprehenderit voluptatem.</div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laboriosam ipsa fuga
                     dolorem aut laborum reprehenderit voluptatem nostrum consectetur delectus.</div>
-
             </div>
-            <a href="#" id="goToApply-4">
-                <button class="btn btn-outline-primary">Записаться</button>
+            <a href="#">
+                <button onclick="goToSection('feedback')" class="btn btn-outline-primary">Записаться</button>
             </a>
         </div>
     </div>
-    </div>
+    </section>
     <!-- about end -->
 
-    <!-- План работы -->
-    <div class="container-fluid schedule">
-        <div class="container wow fadeInUp data-wow-duration=" 2s" data-wow-delay="1s">
-            <h3>План садика</h3>
-            <p>Как дети проводят время в нашем садике</p>
-            <div class=" row">
-                <div class="col-md-4">
-                    <div class="row no-gutters rounded overflow-hidden position-relative">
-                        <div class="col-auto">
-                            <img src="images/numbers/1.png" alt="" width="100px">
-                        </div>
-                        <div class="col">
-                            <h5>Первая услуга</h5>
-                            <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
-                                ea
-                                dolores quasi veniam laboriosam?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row no-gutters rounded overflow-hidden position-relative">
-                        <div class="col-auto">
-                            <img src="images/numbers/2.png" alt="" width="100px">
-                        </div>
-                        <div class="col">
-                            <h5>Вторая услуга</h5>
-                            <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
-                                ea
-                                dolores quasi veniam laboriosam?</p>
+    <!-- plan start -->
+    <section id="plan">
+        <div class="container-fluid schedule">
+            <div class="container wow fadeInUp data-wow-duration=" 1s" data-wow-delay="0.5s">
+                <h3>План садика</h3>
+                <p>Как дети проводят время в нашем садике</p>
+                <div class=" row">
+                    <div class="col-md-4">
+                        <div class="row no-gutters rounded overflow-hidden position-relative">
+                            <div class="col-auto">
+                                <img src="images/numbers/1.png" alt="" width="100px">
+                            </div>
+                            <div class="col">
+                                <h5>Первая услуга</h5>
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                    ea
+                                    dolores quasi veniam laboriosam?</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row no-gutters rounded overflow-hidden position-relative">
-                        <div class="col-auto">
-                            <img src="images/numbers/3.png" alt="" width="100px">
-                        </div>
-                        <div class="col">
-                            <h5>Третья услуга</h5>
-                            <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
-                                ea
-                                dolores quasi veniam laboriosam?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row no-gutters rounded overflow-hidden position-relative">
-                        <div class="col-auto">
-                            <img src="images/numbers/4.png" alt="" width="100px">
-                        </div>
-                        <div class="col">
-                            <h5>Четвертая услуга</h5>
-                            <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
-                                ea
-                                dolores quasi veniam laboriosam?</p>
+                    <div class="col-md-4">
+                        <div class="row no-gutters rounded overflow-hidden position-relative">
+                            <div class="col-auto">
+                                <img src="images/numbers/2.png" alt="" width="100px">
+                            </div>
+                            <div class="col">
+                                <h5>Вторая услуга</h5>
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                    ea
+                                    dolores quasi veniam laboriosam?</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row no-gutters rounded overflow-hidden position-relative">
-                        <div class="col-auto">
-                            <img src="images/numbers/5.png" alt="" width="100px">
-                        </div>
-                        <div class="col">
-                            <h5>Пятая услуга</h5>
-                            <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
-                                ea
-                                dolores quasi veniam laboriosam?</p>
+                    <div class="col-md-4">
+                        <div class="row no-gutters rounded overflow-hidden position-relative">
+                            <div class="col-auto">
+                                <img src="images/numbers/3.png" alt="" width="100px">
+                            </div>
+                            <div class="col">
+                                <h5>Третья услуга</h5>
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                    ea
+                                    dolores quasi veniam laboriosam?</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row no-gutters rounded overflow-hidden position-relative">
-                        <div class="col-auto">
-                            <img src="images/numbers/6.png" alt="" width="100px">
+                    <div class="col-md-4">
+                        <div class="row no-gutters rounded overflow-hidden position-relative">
+                            <div class="col-auto">
+                                <img src="images/numbers/4.png" alt="" width="100px">
+                            </div>
+                            <div class="col">
+                                <h5>Четвертая услуга</h5>
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                    ea
+                                    dolores quasi veniam laboriosam?</p>
+                            </div>
                         </div>
-                        <div class="col">
-                            <h5>Шестая услуга</h5>
-                            <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
-                                ea
-                                dolores quasi veniam laboriosam?</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row no-gutters rounded overflow-hidden position-relative">
+                            <div class="col-auto">
+                                <img src="images/numbers/5.png" alt="" width="100px">
+                            </div>
+                            <div class="col">
+                                <h5>Пятая услуга</h5>
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                    ea
+                                    dolores quasi veniam laboriosam?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row no-gutters rounded overflow-hidden position-relative">
+                            <div class="col-auto">
+                                <img src="images/numbers/6.png" alt="" width="100px">
+                            </div>
+                            <div class="col">
+                                <h5>Шестая услуга</h5>
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                    ea
+                                    dolores quasi veniam laboriosam?</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <a href="#" onclick="goToSection('feedback')">
+                <button class="btn btn-primary">Оставить заявку</button>
+            </a>
         </div>
-        <a href="#" id="goToApply-5">
-            <button class="btn btn-primary">Оставить заявку</button>
-        </a>
-    </div>
+    </section>
+    <!-- plan end -->
 
-    <section class="map">
+    <!-- location start -->
+    <section id="map">
         <a class="dg-widget-link"
             href="http://2gis.kz/almaty/firm/9429940000794906/center/76.87550067901611,43.25217347103417/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть
             на карте Алматы</a>
@@ -254,39 +287,42 @@
         <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в
             настройках вашего браузера.</noscript>
     </section>
+    <!-- location end -->
 
-    <section class="apply">
+    <!-- feedback start -->
+    <section id="feedback">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                    <form class="w-75 pt-5">
+                    <form id="form" class="w-75 pt-5" method="POST">
                         <div class="form-group">
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                            <input type="email" class="form-control" id="form-email"
                                 placeholder="Ваша почта...">
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect1">
-                                <option>Мужской</option>
-                                <option>Женский</option>
+                            <select class="form-control" id="form-gender">
+                                <option>Мальчик</option>
+                                <option>Девочка</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="exampleFormControlSelect2">
-                                <option>От 1 до 2 лет</option>
-                                <option>От 2 до 3 лет</option>
-                                <option>От 3 до 4 лет</option>
-                                <option>От 4 до 5 лет</option>
-                                <option>От 5 до 6 лет</option>
+                            <select class="form-control" id="form-age">
+                                <option>1-2 лет</option>
+                                <option>2-3 лет</option>
+                                <option>3-4 лет</option>
+                                <option>4-5 лет</option>
+                                <option>5-6 лет</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            <textarea class="form-control" id="form-msg" rows="3"
                                 placeholder="Ваше сообщение"></textarea>
                         </div>
+                        <div class="form-group">
+                            <button id="form-submit" type="submit" class="btn btn-violet text-light">Отправить заявку</button>
+                        </div>                        
                     </form>
-                    <a href="#">
-                        <button class="btn btn-violet text-light">Отправить заявку</button>
-                    </a>
+                    
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <img src="images/kid.png" alt="">
@@ -294,21 +330,11 @@
             </div>
         </div>
     </section>
-
+    <!-- feedback ens -->
 
     <footer class="text-center">
-        <p>Ясли Сад №8. Разработано студентами группы ТЗИ-19Р</p>
+        <p>Ясли Сад №8. Разработано студентами группы ТЗИ-19Р (и еще одним школьником) </p>
     </footer>
-
-
-
-
-
-
-
-
-
-
 
     <!-- javascript -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -318,59 +344,53 @@
 
     <script>
         new WOW().init();
-
-        $("#goToHome").click(function () {
+        const speed = 1500;
+        const navHeigth = $('#navbar')[0].offsetHeight;
+        goToSection = sectionId => 
             $([document.documentElement, document.body]).animate({
-                scrollTop: $(".home").offset().top
-            }, 4000);
-        });
+                scrollTop: $("#"+sectionId).offset().top - navHeigth
+            }, speed);
 
-        $("#goToApply").click(function () {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(".apply").offset().top
-            }, 4000);
-        });
-
-        $("#goToAbout").click(function () {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(".about").offset().top
-            }, 4000);
-        });
-
-        $("#goToPlan").click(function () {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(".about").offset().top
-            }, 4000);
-        });
-
-        $("#goToApply-2").click(function () {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(".apply").offset().top
-            }, 4000);
-        });
-
-        $("#goToAbout-2").click(function () {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(".about").offset().top
-            }, 4000);
-        });
-
-        $("#goToApply-3").click(function () {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(".apply").offset().top
-            }, 4000);
-        });
-
-        $("#goToApply-4").click(function () {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(".apply").offset().top
-            }, 4000);
-        });
-
-        $("#goToApply-5").click(function () {
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(".apply").offset().top
-            }, 4000);
+        $('#form').trigger('reset');
+        $('#form').on('submit', function(e) {
+            e.preventDefault();
+            if ($("#form-email")[0].value.length > 0){
+            var formData = new FormData();
+            formData.append('age',   $('#form-age')[0].value);
+            formData.append('msg',   $('#form-msg')[0].value);
+            formData.append('email', $('#form-email')[0].value);
+            formData.append('gender',   $('#form-gender')[0].value);
+            $.ajax({
+                type: "POST",
+                url: 'feedback.php',
+                contentType: false,
+                processData: false,
+                data: formData,
+                dataType: 'text',
+                beforeSend: function() {
+                    $("input").attr("readonly", "readonly");
+                    $("select").attr('disabled', 'disabled');
+                    $('#form-email').css( "box-shadow", "none");
+                    $("textarea").css("max-height", $("#form-msg")[0].offsetHeight);
+                    $("textarea").css("min-height", $("#form-msg")[0].offsetHeight);
+                    $("textarea").attr("readonly", "readonly");
+                    $("#form-submit").html("Отправляем данные...");
+                    $("#form-submit").attr('disabled', 'disabled');
+                    $("#form-submit").css('cursor', 'auto');
+                    
+                },
+                error:  function (jqXHR, exception) {
+                    console.log(jqXHR)
+                    $("#form-submit").html("Отправляем данные...");
+                },
+                success: function(msg) {
+                    console.log(msg);
+                    $('#form').trigger('reset');
+                    $('#form-email').css("box-shadow", "none");
+                    $('#form-submit').html(msg);
+                }
+            })}
+            else $('#form-email').css("box-shadow", " rgba(255, 0, 0, 0.3) 0 0 10px");
         });
     </script>
 </body>
