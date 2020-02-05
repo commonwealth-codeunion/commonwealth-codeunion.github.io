@@ -19,34 +19,34 @@
         }
 
         function loadData() {
-        return new Promise((resolve, reject) => {
-            window.addEventListener('scroll', noScroll);
-            window.addEventListener('load',
-            () => resolve());
-        })
+            return new Promise((resolve, reject) => {
+                window.addEventListener('scroll', noScroll);
+                window.addEventListener('load',
+                    () => resolve());
+            })
         }
 
         loadData()
-        .then(() => {
-            let preloaderEl = document.getElementById('preloader');
-            preloaderEl.classList.add('hidden');
-            preloaderEl.classList.remove('visible');
-            preloaderEl.style.backgroundImage = "none";
-            window.removeEventListener('scroll', noScroll);
-        }); 
+            .then(() => {
+                let preloaderEl = document.getElementById('preloader');
+                preloaderEl.classList.add('hidden');
+                preloaderEl.classList.remove('visible');
+                preloaderEl.style.backgroundImage = "none";
+                window.removeEventListener('scroll', noScroll);
+            }); 
     </script>
 
-    
+
     <!-- preloader -->
     <div id="preloader" class="visible"></div>
-    
+
     <a href="https://wa.me/77010389899" class="whatsapp-unique pulse">
         <img src="images/whatsapp.png" alt="" width="64">
     </a>
     <!-- navbar start -->
     <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Ясли Сад №8</a>
+            <a class="navbar-brand" href="#"><img src="images/logo.png" width="100"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -62,8 +62,10 @@
                     <li class="nav-item">
                         <a class="nav-link" onclick="goToSection('plan')" id="goToPlan" href="#plan">План</a>
                     </li>
-
                     <li class="nav-item">
+                        <a class="nav-link" onclick="goToSection('reviews')" id="goToReviews" href="#reviews">Отзывы</a>
+                    </li>
+                    <li class="nav-item text-center" id="feedbackBtn">
                         <a class="nav-link" onclick="goToSection('feedback')" href="#feedback">Записаться</a>
                     </li>
                 </ul>
@@ -78,10 +80,10 @@
             <h3><span>Добро пожаловать</span></h3>
             <h1><span>Лучший детский сад</span></h1>
             <h2><span>Для вашего ребенка</span></h2>
-            <a href="#" onclick="goToSection('about')" >
+            <a href="#" onclick="goToSection('about')">
                 <button class="btn btn-violet">Подробнее</button>
             </a>
-            <a href="#" onclick="goToSection('feedback')" >
+            <a href="#" onclick="goToSection('feedback')">
                 <button class="btn btn-orange pulse">Записаться</button>
             </a>
         </div>
@@ -94,7 +96,7 @@
         <div class="row">
             <h4>Оставьте заявку прямо сейчас</h4>
             <a class="ml-auto" href="#" onclick="goToSection('feedback')" ">
-                <button class="btn btn-light">Записаться</button>
+                <button class=" btn btn-light">Записаться</button>
             </a>
         </div>
     </div>
@@ -103,79 +105,81 @@
     <!-- about start -->
     <section id="about">
         <div class="container-fluid services-bg">
-        <div class=" container services pb-5 wow fadeInUp data-wow-duration=" 0.5s" data-wow-delay="0ю5s"">
-        <div class="row">
-            <div class="col-md-3">
-                <img src="images/icons/1.png" width="50%" alt="Услуги">
-                <h3>Обучение</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
-                    nam
-                    enim sapiente eius modi veritatis labore.
-                </p>
-            </div>
-            <div class="col-md-3">
-                <img src="images/icons/2.jpg" width="50%" alt="Услуги">
-                <h3>Развитие</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
-                    nam
-                    enim sapiente eius modi veritatis labore.
-                </p>
-            </div>
-            <div class="col-md-3">
-                <img src="images/icons/3.png" width="50%" alt="Услуги">
-                <h3>Дисциплина</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
-                    nam
-                    enim sapiente eius modi veritatis labore.
-                </p>
-            </div>
-            <div class="col-md-3">
-                <img src="images/icons/4.png" width="50%" alt="Услуги">
-                <h3>Взгляд</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
-                    nam
-                    enim sapiente eius modi veritatis labore.
-                </p>
+            <div class=" container services pb-5 wow fadeInUp data-wow-duration=" 0.5s" data-wow-delay="0ю5s"">
+        <div class=" row">
+                <div class="col-md-3">
+                    <img src="images/icons/1.png" width="50%" alt="Услуги">
+                    <h3>Обучение</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
+                        nam
+                        enim sapiente eius modi veritatis labore.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/icons/2.jpg" width="50%" alt="Услуги">
+                    <h3>Развитие</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
+                        nam
+                        enim sapiente eius modi veritatis labore.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/icons/3.png" width="50%" alt="Услуги">
+                    <h3>Дисциплина</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
+                        nam
+                        enim sapiente eius modi veritatis labore.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/icons/4.png" width="50%" alt="Услуги">
+                    <h3>Взгляд</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
+                        nam
+                        enim sapiente eius modi veritatis labore.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
 
-    <div class="container about pt-5 pb-5 justify-content-center">
-        <div class="row wow fadeInUp data-wow-duration=" 1s"
-        data-wow-delay="0.5s""">
-        <div class="col-md-6">
-            <img src="images/illustration.jpg" width="100%" alt="Детский сад">
-        </div>
-        <div class="col-md-6">
-            <ul class="nav nav-pills mb-3 m-3" id="pills-tab" role="tablist p-3">
-                <li class="nav-item">
-                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                        aria-controls="pills-home" aria-selected="true">Забота</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                        aria-controls="pills-profile" aria-selected="false">Питание</a>
-                </li>
-            </ul>
-            <h3 style="text-transform: none;">Мы предлагаем</h3>
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Corporis ea dolores totam aspernatur iure deleniti id voluptates porro dolorum debitis?</div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laboriosam ipsa fuga
-                    dolorem aut laborum reprehenderit voluptatem nostrum consectetur delectus.</div>
+        <div class="container about pt-5 pb-5 justify-content-center">
+            <div class="row wow fadeInUp data-wow-duration=" 1s" data-wow-delay="0.5s""">
+                <div class="col-md-6">
+                    <img src="images/illustration.jpg" width="100%" alt="Детский сад">
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav nav-pills mb-3 m-3" id="pills-tab" role="tablist p-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                role="tab" aria-controls="pills-home" aria-selected="true">Забота</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                role="tab" aria-controls="pills-profile" aria-selected="false">Питание</a>
+                        </li>
+                    </ul>
+                    <h3 style="text-transform: none;">Мы предлагаем</h3>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Corporis ea dolores totam aspernatur iure deleniti id voluptates porro dolorum debitis?
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus laboriosam ipsa fuga
+                            dolorem aut laborum reprehenderit voluptatem nostrum consectetur delectus.</div>
+                    </div>
+                    <a href="#">
+                        <button onclick="goToSection('feedback')" class="btn btn-outline-primary">Записаться</button>
+                    </a>
+                </div>
             </div>
-            <a href="#">
-                <button onclick="goToSection('feedback')" class="btn btn-outline-primary">Записаться</button>
-            </a>
-        </div>
-    </div>
     </section>
     <!-- about end -->
 
@@ -193,7 +197,8 @@
                             </div>
                             <div class="col">
                                 <h5>Первая услуга</h5>
-                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                    minima
                                     ea
                                     dolores quasi veniam laboriosam?</p>
                             </div>
@@ -206,7 +211,8 @@
                             </div>
                             <div class="col">
                                 <h5>Вторая услуга</h5>
-                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                    minima
                                     ea
                                     dolores quasi veniam laboriosam?</p>
                             </div>
@@ -219,7 +225,8 @@
                             </div>
                             <div class="col">
                                 <h5>Третья услуга</h5>
-                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                    minima
                                     ea
                                     dolores quasi veniam laboriosam?</p>
                             </div>
@@ -232,7 +239,8 @@
                             </div>
                             <div class="col">
                                 <h5>Четвертая услуга</h5>
-                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                    minima
                                     ea
                                     dolores quasi veniam laboriosam?</p>
                             </div>
@@ -245,7 +253,8 @@
                             </div>
                             <div class="col">
                                 <h5>Пятая услуга</h5>
-                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                    minima
                                     ea
                                     dolores quasi veniam laboriosam?</p>
                             </div>
@@ -258,7 +267,8 @@
                             </div>
                             <div class="col">
                                 <h5>Шестая услуга</h5>
-                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minima
+                                <p class="muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+                                    minima
                                     ea
                                     dolores quasi veniam laboriosam?</p>
                             </div>
@@ -272,6 +282,58 @@
         </div>
     </section>
     <!-- plan end -->
+
+    <!-- Reviews start -->
+    <section id="reviews">
+        <div class="container pb-5 pt-5">
+            <h3 class="text-center">Отзывы родителей</h3>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="wrap">
+                        <div class="gradient">
+                            <div class="card">
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <p>Хороший садик, классная атмосфера. Всем рекомендую!</p>
+                                        <div class="blockquote-footer font-italic">Елена Павловна</div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="wrap">
+                        <div class="gradient">
+                            <div class="card">
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <p>Ребёнок всегда возвращается довольный, спасибо вам!</p>
+                                        <div class="blockquote-footer font-italic">Елена Павловна</div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="wrap">
+                        <div class="gradient">
+                            <div class="card">
+                                <div class="card-body">
+                                    <blockquote class="blockquote mb-0">
+                                        <p>Долго искали садик и наконец, попался самый лучший садик из всех</p>
+                                        <div class="blockquote-footer font-italic">Елена Павловна</div>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Reviews end -->
 
     <!-- location start -->
     <section id="map">
@@ -296,8 +358,7 @@
                 <div class="col-lg-6 col-md-12">
                     <form id="form" class="w-75 pt-5" method="POST">
                         <div class="form-group">
-                            <input type="email" class="form-control" id="form-email"
-                                placeholder="Ваша почта...">
+                            <input type="email" class="form-control" id="form-email" placeholder="Ваша почта...">
                         </div>
                         <div class="form-group">
                             <select class="form-control" id="form-gender">
@@ -319,10 +380,11 @@
                                 placeholder="Ваше сообщение"></textarea>
                         </div>
                         <div class="form-group">
-                            <button id="form-submit" type="submit" class="btn btn-violet text-light">Отправить заявку</button>
-                        </div>                        
+                            <button id="form-submit" type="submit" class="btn btn-violet text-light">Отправить
+                                заявку</button>
+                        </div>
                     </form>
-                    
+
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <img src="images/kid.png" alt="">
@@ -333,7 +395,7 @@
     <!-- feedback ens -->
 
     <footer class="text-center">
-        <p>Ясли Сад №8. Разработано студентами группы ТЗИ-19Р (и еще одним школьником) </p>
+        <p>Ясли Сад №8. Разработано студентами группы ТЗИ-19Р</p>
     </footer>
 
     <!-- javascript -->
@@ -346,50 +408,53 @@
         new WOW().init();
         const speed = 1500;
         const navHeigth = $('#navbar')[0].offsetHeight;
-        goToSection = sectionId => 
+        goToSection = sectionId =>
             $([document.documentElement, document.body]).animate({
-                scrollTop: $("#"+sectionId).offset().top - navHeigth
+                scrollTop: $("#" + sectionId).offset().top - navHeigth
             }, speed);
 
+
+
         $('#form').trigger('reset');
-        $('#form').on('submit', function(e) {
+        $('#form').on('submit', function (e) {
             e.preventDefault();
-            if ($("#form-email")[0].value.length > 0){
-            var formData = new FormData();
-            formData.append('age',   $('#form-age')[0].value);
-            formData.append('msg',   $('#form-msg')[0].value);
-            formData.append('email', $('#form-email')[0].value);
-            formData.append('gender',   $('#form-gender')[0].value);
-            $.ajax({
-                type: "POST",
-                url: 'feedback.php',
-                contentType: false,
-                processData: false,
-                data: formData,
-                dataType: 'text',
-                beforeSend: function() {
-                    $("input").attr("readonly", "readonly");
-                    $("select").attr('disabled', 'disabled');
-                    $('#form-email').css( "box-shadow", "none");
-                    $("textarea").css("max-height", $("#form-msg")[0].offsetHeight);
-                    $("textarea").css("min-height", $("#form-msg")[0].offsetHeight);
-                    $("textarea").attr("readonly", "readonly");
-                    $("#form-submit").html("Отправляем данные...");
-                    $("#form-submit").attr('disabled', 'disabled');
-                    $("#form-submit").css('cursor', 'auto');
-                    
-                },
-                error:  function (jqXHR, exception) {
-                    console.log(jqXHR)
-                    $("#form-submit").html("Отправляем данные...");
-                },
-                success: function(msg) {
-                    console.log(msg);
-                    $('#form').trigger('reset');
-                    $('#form-email').css("box-shadow", "none");
-                    $('#form-submit').html(msg);
-                }
-            })}
+            if ($("#form-email")[0].value.length > 0) {
+                var formData = new FormData();
+                formData.append('age', $('#form-age')[0].value);
+                formData.append('msg', $('#form-msg')[0].value);
+                formData.append('email', $('#form-email')[0].value);
+                formData.append('gender', $('#form-gender')[0].value);
+                $.ajax({
+                    type: "POST",
+                    url: 'feedback.php',
+                    contentType: false,
+                    processData: false,
+                    data: formData,
+                    dataType: 'text',
+                    beforeSend: function () {
+                        $("input").attr("readonly", "readonly");
+                        $("select").attr('disabled', 'disabled');
+                        $('#form-email').css("box-shadow", "none");
+                        $("textarea").css("max-height", $("#form-msg")[0].offsetHeight);
+                        $("textarea").css("min-height", $("#form-msg")[0].offsetHeight);
+                        $("textarea").attr("readonly", "readonly");
+                        $("#form-submit").html("Отправляем данные...");
+                        $("#form-submit").attr('disabled', 'disabled');
+                        $("#form-submit").css('cursor', 'auto');
+
+                    },
+                    error: function (jqXHR, exception) {
+                        console.log(jqXHR)
+                        $("#form-submit").html("Отправляем данные...");
+                    },
+                    success: function (msg) {
+                        console.log(msg);
+                        $('#form').trigger('reset');
+                        $('#form-email').css("box-shadow", "none");
+                        $('#form-submit').html(msg);
+                    }
+                })
+            }
             else $('#form-email').css("box-shadow", " rgba(255, 0, 0, 0.3) 0 0 10px");
         });
     </script>

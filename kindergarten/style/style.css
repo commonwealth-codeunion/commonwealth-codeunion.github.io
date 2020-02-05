@@ -25,6 +25,12 @@ body {
     margin: 0 3rem;
 }
 
+.navbar #feedbackBtn, .navbar #feedbackBtn a {
+    background-color: #FF4D76;
+    color: white;
+    border-radius: 5px;
+}
+
 #home { 
     display: flex;
     justify-content: center;
@@ -32,6 +38,7 @@ body {
     align-items: center;
     height: calc(100vh - 100px);
     background: url('../images/home.jpg');
+    background-size: cover;
 }   
 
 #home h1, h2, h3 {
@@ -142,6 +149,16 @@ body {
 
 .services-bg {
     background: url(../images/about.jpg);
+}
+
+#reviews .wrap {
+    padding: 25px;
+}
+
+#reviews .gradient {
+    margin: 0 auto;
+    border: 5px solid transparent;
+    border-image: 10 repeating-linear-gradient(45deg, #A7CECC, #A7CECC 10px, transparent 10px, transparent 20px, #F8463F 20px, #F8463F 30px,transparent 30px, transparent 40px);
 }
 
 #feedback {
