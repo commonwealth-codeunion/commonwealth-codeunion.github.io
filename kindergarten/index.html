@@ -91,64 +91,68 @@
     <!-- home end -->
 
     <!-- banner -->
-    <div class="banner wow fadeInUp data-wow-duration=" 1s" data-wow-delay="0.5s"">
-        <div class=" container">
-        <div class="row">
-            <h4>Оставьте заявку прямо сейчас</h4>
-            <a class="ml-auto" href="#" onclick="goToSection('feedback')" ">
-                <button class=" btn btn-light">Записаться</button>
-            </a>
+    <div class="banner wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div class="container">
+            <div class="row">
+                <h4>Оставьте заявку прямо сейчас</h4>
+                <a class="ml-auto" href="#" onclick="goToSection('feedback')">
+                    <button class="btn btn-light">Записаться</button>
+                </a>
+            </div>
         </div>
-    </div>
     </div>
 
     <!-- about start -->
     <section id="about">
         <div class="container-fluid services-bg">
-            <div class=" container services pb-5 wow fadeInUp data-wow-duration=" 0.5s" data-wow-delay="0ю5s"">
-        <div class=" row">
-                <div class="col-md-3">
-                    <img src="images/icons/1.png" width="50%" alt="Услуги">
-                    <h3>Обучение</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
-                        nam
-                        enim sapiente eius modi veritatis labore.
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/icons/2.jpg" width="50%" alt="Услуги">
-                    <h3>Развитие</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
-                        nam
-                        enim sapiente eius modi veritatis labore.
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/icons/3.png" width="50%" alt="Услуги">
-                    <h3>Дисциплина</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
-                        nam
-                        enim sapiente eius modi veritatis labore.
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <img src="images/icons/4.png" width="50%" alt="Услуги">
-                    <h3>Взгляд</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro dolor
-                        nam
-                        enim sapiente eius modi veritatis labore.
-                    </p>
+            <div class="container services pb-5 fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
+                <div class=" row">
+                    <div class="col-md-3">
+                        <img src="images/icons/1.png" width="50%" alt="Услуги">
+                        <h3>Обучение</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro
+                            dolor
+                            nam
+                            enim sapiente eius modi veritatis labore.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/icons/2.jpg" width="50%" alt="Услуги">
+                        <h3>Развитие</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro
+                            dolor
+                            nam
+                            enim sapiente eius modi veritatis labore.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/icons/3.png" width="50%" alt="Услуги">
+                        <h3>Дисциплина</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro
+                            dolor
+                            nam
+                            enim sapiente eius modi veritatis labore.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/icons/4.png" width="50%" alt="Услуги">
+                        <h3>Взгляд</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur vitae provident porro
+                            dolor
+                            nam
+                            enim sapiente eius modi veritatis labore.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
 
         <div class="container about pt-5 pb-5 justify-content-center">
-            <div class="row wow fadeInUp data-wow-duration=" 1s" data-wow-delay="0.5s""">
+            <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                 <div class="col-md-6">
                     <img src="images/illustration.jpg" width="100%" alt="Детский сад">
                 </div>
@@ -186,7 +190,7 @@
     <!-- plan start -->
     <section id="plan">
         <div class="container-fluid schedule">
-            <div class="container wow fadeInUp data-wow-duration=" 1s" data-wow-delay="0.5s">
+            <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                 <h3>План садика</h3>
                 <p>Как дети проводят время в нашем садике</p>
                 <div class=" row">
@@ -412,8 +416,6 @@
             $([document.documentElement, document.body]).animate({
                 scrollTop: $("#" + sectionId).offset().top - navHeigth
             }, speed);
-
-
 
         $('#form').trigger('reset');
         $('#form').on('submit', function (e) {
