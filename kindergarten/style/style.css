@@ -100,16 +100,12 @@ body {
     color: #9C27B0;
 }
 
-.services img {
-    margin: 4em;
-}
-
 .services h3 {
     text-transform: none;
 }
 
-.services .row {
-    text-align: center;
+#about {
+    padding-top: 4em;
 }
 
 #about .row {
@@ -133,7 +129,6 @@ body {
     background-image: url('../images/schedule.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
     color: white;
     padding: 40px;
     text-align: center;
@@ -286,12 +281,12 @@ footer {
     }
 }
 
-
-@media screen and (max-width: 684px) {
+@media screen and (max-width: 700px) {
     
     #about {
         text-align: center;
     }
+    
     #home h1 {
         font-size: 2rem;
     }
@@ -299,6 +294,7 @@ footer {
         margin: 0.5em;
     }
     #home h2 h3, span {
+        border-radius: 0px;
         padding: 0;
     }
     .banner {
@@ -307,11 +303,11 @@ footer {
         height: 300px;
     }
     .banner .ml-auto {
-        margin-left: 35% !important;
+        margin: 0 auto;
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
     .navbar {
         height: 100px;
     }
@@ -321,16 +317,9 @@ footer {
     #home {
         height: 100vh;
     }
-    .navbar {
-        height: 100%;
-    }
     .nav-link {
         margin: 0;
     }
-    #home h2 h3, span {
-        border-radius: 0px;
-    }
-
 }
 
 
