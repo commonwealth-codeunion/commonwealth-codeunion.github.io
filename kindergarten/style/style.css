@@ -267,6 +267,15 @@ footer {
     width: 100%;
 }
 
+.main {
+    height: 300px;
+    background: url(../images/texture.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
 
 @media screen and (max-width: 768px) {
     #feedback {
