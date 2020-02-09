@@ -332,6 +332,12 @@ footer p {
     .nav-link {
         margin: 0;
     }
+    #home h2 h3, span {
+        border-radius: 0px;
+    }
+    #about img {
+        width: 30%;
+    }
 }
 
 
