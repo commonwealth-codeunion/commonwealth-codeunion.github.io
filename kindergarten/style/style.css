@@ -211,6 +211,9 @@ footer {
     color: #fff;
 }
 
+footer p {
+    margin-bottom: 0 !important;
+}
 
 #feedback .btn {
     padding: 1rem 2rem;
@@ -271,6 +274,15 @@ footer {
     color: #fff;
 }
 
+@media screen and (max-width: 570px) {
+    .main {
+        text-align: center;
+    }
+    .main h1 {
+        font-size: 2rem;
+        padding: 10px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     #feedback {
