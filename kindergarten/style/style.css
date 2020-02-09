@@ -39,6 +39,7 @@ body {
     height: calc(100vh - 100px);
     background: url('../images/home.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
 }   
 
 #home h1, h2, h3 {
@@ -255,13 +256,14 @@ footer {
     background-color: #f0f0f0;
 }
 
-.gallery .gallery-grid {
+.gallery .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 1em;
+    grid-auto-flow: row dense;
 }
 
-.gallery .gallery-grid img  {
+.gallery .grid img  {
     width: 100%;
 }
 
@@ -324,25 +326,25 @@ footer {
 
 
 @media screen and (min-width: 0px) {
-    .gallery .gallery-grid {
+    .gallery .grid {
         grid-template-columns: 1fr;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .gallery .gallery-grid {
+    .gallery .grid {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (min-width: 992px) {
-    .gallery .gallery-grid {
+    .gallery .grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .gallery .gallery-grid {
+    .gallery .grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
