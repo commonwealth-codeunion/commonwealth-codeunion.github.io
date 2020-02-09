@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Детский сад N8</title>
+    <title>Ясли Сад №8 - Лучшее место для ваших детей!</title>
     <!-- css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/animate.css">
@@ -13,36 +13,16 @@
 </head>
 
 <body>
-    <script>
-        const noScroll = () => {
-            window.scroll(0, 0);
-        }
-
-        function loadData() {
-            return new Promise((resolve, reject) => {
-                window.addEventListener('scroll', noScroll);
-                window.addEventListener('load',
-                    () => resolve());
-            })
-        }
-
-        loadData()
-            .then(() => {
-                let preloaderEl = document.getElementById('preloader');
-                preloaderEl.classList.add('hidden');
-                preloaderEl.classList.remove('visible');
-                preloaderEl.style.backgroundImage = "none";
-                window.removeEventListener('scroll', noScroll);
-            }); 
-    </script>
-
-
-    <!-- preloader -->
+    <!-- preloader start -->
     <div id="preloader" class="visible"></div>
+    <!-- preloader end -->
 
+    <!-- unique button start -->
     <a href="https://wa.me/77010389899" class="whatsapp-unique pulse">
         <img src="images/whatsapp.png" alt="" width="64">
     </a>
+    <!-- unique button end -->
+
     <!-- navbar start -->
     <nav id="navbar" class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
         <div class="container">
@@ -90,7 +70,7 @@
     </section>
     <!-- home end -->
 
-    <!-- banner -->
+    <!-- banner start -->
     <div class="banner wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
         <div class="container">
             <div class="row">
@@ -101,8 +81,9 @@
             </div>
         </div>
     </div>
+    <!-- banner end -->
 
-    <!-- about start -->
+    <!-- services start -->
     <section id="about">
         <div class="container-fluid services-bg">
             <div class="container services pb-5 fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
@@ -123,7 +104,7 @@
                             Независимо от потребностей вашего ребенка, каждая из наших программ обеспечит поддержку и
                             стимул, необходимые для оптимального роста.
                         </p>
-                        <a href="#">Перейти ></a>
+                        <a href="growth.html">Перейти ></a>
                     </div>
                     <div class="col-lg-3">
                         <img src="images/icons/3.png" width="50%" alt="Услуги">
@@ -132,7 +113,7 @@
                             Мы уделяем большее время ребенку. Игры на открытом воздухе позволяют им играть в командах в
                             игры с творческими элементами.
                         </p>
-                        <a href="#">Перейти ></a>
+                        <a href="discipline.html">Перейти ></a>
                     </div>
                     <div class="col-lg-3">
                         <img src="images/icons/4.png" width="50%" alt="Услуги">
@@ -141,28 +122,31 @@
                             Мы хотим создать теплую и заботливую атмосферу, где дети чувствуют себя в
                             безопасности и будут всегда счастливы.
                         </p>
-                        <a href="#">Перейти ></a>
+                        <a href="mind.html">Перейти ></a>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- services end -->
 
+        <!-- gallery start -->
         <section class="gallery p-5">
             <div class="container">
                 <h2>Наша галерея счастья</h2>
                 <p>Здесь вы можете увидеть, <br>как дети улыбаются</p>
-                <div class="grid wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <img class="grid-item" src="./images/photo1.jpg" alt="photo">
-                    <img class="grid-item" src="./images/photo2.jpg" alt="photo">
-                    <img class="grid-item" src="./images/photo3.jpg" alt="photo">
-                    <img class="grid-item" src="./images/photo4.jpeg" alt="photo">
-                    <img class="grid-item" src="./images/photo5.jpeg" alt="photo">
-                    <img class="grid-item" src="./images/photo6.jpeg" alt="photo">
-                    <img class="grid-item" src="./images/photo7.webp" alt="photo">
+                <div class="grid wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s"">
+                    <img class=" grid-item" src="./images/gallery/photo1.jpg" alt="photo">
+                    <img class="grid-item" src="./images/gallery/photo2.jpg" alt="photo">
+                    <img class="grid-item" src="./images/gallery/photo3.jpg" alt="photo">
+                    <img class="grid-item" src="./images/gallery/photo4.jpeg" alt="photo">
+                    <img class="grid-item" src="./images/gallery/photo5.jpeg" alt="photo">
+                    <img class="grid-item" src="./images/gallery/photo6.jpeg" alt="photo">
+                    <img class="grid-item" src="./images/gallery/photo7.webp" alt="photo">
                 </div>
-            </div>
         </section>
+        <!-- gallery end -->
 
+        <!-- about start -->
         <div class="container about pt-5 pb-5 justify-content-center">
             <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                 <div class="col-md-6">
@@ -302,7 +286,7 @@
     </section>
     <!-- plan end -->
 
-    <!-- Reviews start -->
+    <!-- reviews start -->
     <section id="reviews">
         <div class="container pb-5 pt-5">
             <h3 class="text-center">Отзывы родителей</h3>
@@ -352,7 +336,7 @@
             </div>
         </div>
     </section>
-    <!-- Reviews end -->
+    <!-- reviews end -->
 
     <!-- location start -->
     <section id="map">
@@ -411,20 +395,45 @@
             </div>
         </div>
     </section>
-    <!-- feedback ens -->
+    <!-- feedback end -->
 
+    <!-- footer start -->
     <footer class="text-center">
         <p>Ясли Сад №8. Разработано студентами группы ТЗИ-19Р</p>
     </footer>
+    <!-- footer end -->
 
-    <!-- javascript -->
+    <!-- javascript start -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- javascript end -->
 
     <script>
         new WOW().init();
+
+        const noScroll = () => {
+            window.scroll(0, 0);
+        }
+
+        function loadData() {
+            return new Promise((resolve, reject) => {
+                window.addEventListener('scroll', noScroll);
+                window.addEventListener('load',
+                    () => resolve());
+            })
+        }
+
+        loadData()
+            .then(() => {
+                let preloaderEl = document.getElementById('preloader');
+                preloaderEl.classList.add('hidden');
+                preloaderEl.classList.remove('visible');
+                preloaderEl.style.backgroundImage = "none";
+                window.removeEventListener('scroll', noScroll);
+            });
+
         const speed = 1500;
         const navHeigth = $('#navbar')[0].offsetHeight;
         goToSection = sectionId =>

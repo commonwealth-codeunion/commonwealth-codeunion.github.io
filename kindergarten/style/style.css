@@ -262,6 +262,15 @@ footer {
     width: 100%;
 }
 
+.main {
+    height: 300px;
+    background: url(../images/texture.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
 
 @media screen and (max-width: 768px) {
     #feedback {
@@ -272,8 +281,12 @@ footer {
     }
 }
 
-
-@media screen and (max-width: 684px) {
+@media screen and (max-width: 700px) {
+    
+    #about {
+        text-align: center;
+    }
+    
     #home h1 {
         font-size: 2rem;
     }
@@ -281,6 +294,7 @@ footer {
         margin: 0.5em;
     }
     #home h2 h3, span {
+        border-radius: 0px;
         padding: 0;
     }
     .banner {
