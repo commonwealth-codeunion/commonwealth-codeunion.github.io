@@ -278,7 +278,7 @@ footer {
 }
 
 
-@media screen and (max-width: 684px) {
+@media screen and (max-width: 700px) {
     
     #about {
         text-align: center;
@@ -290,6 +290,7 @@ footer {
         margin: 0.5em;
     }
     #home h2 h3, span {
+        border-radius: 0px;
         padding: 0;
     }
     .banner {
@@ -318,10 +319,6 @@ footer {
     .nav-link {
         margin: 0;
     }
-    #home h2 h3, span {
-        border-radius: 0px;
-    }
-
 }
 
 
