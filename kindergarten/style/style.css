@@ -127,7 +127,7 @@ body {
 }
 
 .schedule {
-    background-image: url('../images/schedule.png');
+    background-image: url('../images/schedule.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -323,9 +323,6 @@ footer p {
 }
 
 @media screen and (max-width: 992px) {
-    #home {
-        height: 100vh;
-    }
     .nav-link {
         margin: 0;
     }
