@@ -1,0 +1,13 @@
+#mind {
+    height: 100%;
+    padding: 2rem 0;
+}
+
+#mind .card {
+    margin: 1rem;
+}
+
+#mind img {
+    height: 250px;
+    background-size: cover;
+}

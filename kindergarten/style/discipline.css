@@ -1,0 +1,28 @@
+#discipline {
+    padding: 3rem;
+}
+
+#discipline img {
+    transform: scale(1.1) rotate(4deg);
+    object-fit: cover;
+}
+
+#discipline .card {
+    overflow: hidden;
+    z-index: 0;
+    margin: 2rem 0;
+}
+
+#discipline h5 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+#discipline .ux-line {
+    max-width: 80px;
+    margin: 10px 0;
+    height: 3px;
+    border-radius: 30px;
+    background-color: green;
+}
