@@ -24,6 +24,7 @@ body {
 
 .timeline-event {
   position: relative;
+  list-style: none;
 }
 
 .timeline-event:hover .timeline-event-thumbnail {

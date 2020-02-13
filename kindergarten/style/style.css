@@ -258,8 +258,8 @@ footer p {
 
 
 .gallery  img  {
-    width: 100% !important;
-    padding: 0.3rem;
+    height: 80vh;
+    object-fit: cover;
 }
 
 .main {
@@ -334,30 +334,5 @@ footer p {
     }
     .about img {
         width: 100% !important;
-    }
-}
-
-
-@media screen and (min-width: 0px) {
-    .gallery .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .gallery .grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .gallery .grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .gallery .grid {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

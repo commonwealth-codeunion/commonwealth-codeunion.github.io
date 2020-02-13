@@ -71,7 +71,7 @@
     <!-- home end -->
 
     <!-- banner start -->
-    <div class="banner wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="banner wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
         <div class="container">
             <div class="row">
                 <h4>Оставьте заявку прямо сейчас</h4>
@@ -134,42 +134,63 @@
             <div class="container">
                 <h2>Наша галерея счастья</h2>
                 <p>Здесь вы можете увидеть, <br>как дети улыбаются</p>
-                <div class="row flex-wrap">
-                    <div class="col-md-3">
-                        <img src="images/gallery/photo1.jpg" alt="">
-                        <img src="images/gallery/photo2.jpg" alt="">
-                        <img src="images/gallery/photo3.jpg" alt="">
-                        <img src="images/gallery/photo4.jpg" alt="">
-                        <img src="images/gallery/photo5.JPG" alt="">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="/images/gallery/photo1.jpg" alt="Первый слайд">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/images/gallery/photo2.jpg" alt="Второй слайд">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/images/gallery/photo3.jpg" alt="Третий слайд">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/images/gallery/photo4.jpg" alt="Четвертый слайд">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/images/gallery/photo5.JPG" alt="Пятый слайд">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/images/gallery/photo6.JPG" alt="Шестый слайд">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/images/gallery/photo7.jpg" alt="Седьмой слайд">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/images/gallery/photo8.JPG" alt="Восьмой слайд">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/images/gallery/photo9.jpg" alt="Девятый слайд">
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <img src="images/gallery/photo6.JPG" alt="">
-                        <img src="images/gallery/photo7.jpg" alt="">
-                        <img src="images/gallery/photo8.JPG" alt="">
-                        <img src="images/gallery/photo9.jpg" alt="">
-                        <img src="images/gallery/photo10.jpg" alt="">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="images/gallery/photo11.JPG" alt="">
-                        <img src="images/gallery/photo12.JPG" alt="">
-                        <img src="images/gallery/photo13.JPG" alt="">
-                        <img src="images/gallery/photo14.JPG" alt="">
-                        <img src="images/gallery/photo15.JPG" alt="">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="images/gallery/photo16.JPG" alt="">
-                        <img src="images/gallery/photo17.JPG" alt="">
-                        <img src="images/gallery/photo18.JPG" alt="">
-                        <img src="images/gallery/photo19.JPG" alt="">
-                        <img src="images/gallery/photo20.JPG" alt="">
-                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Предыдущий</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Следущщ</span>
+                    </a>
                 </div>
+            </div>
         </section>
         <!-- gallery end -->
 
         <!-- about start -->
         <div class="container about pt-5 pb-5 justify-content-center">
-            <div class="row wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="row wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
                 <div class="col-md-6">
                     <img src="images/illustration.jpg" width="100%" alt="Детский сад">
                 </div>
@@ -208,7 +229,7 @@
     <!-- plan start -->
     <section id="plan">
         <div class="container-fluid schedule">
-            <div class="container wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="container wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.5s">
                 <h3>План садика</h3>
                 <p>Как дети проводят время в нашем садике</p>
                 <div class="row">
