@@ -1,11 +1,11 @@
 #mission .title {
-    color: white;
-    background-image: url('/images/team/background_mission.png');
+  color: white;
+    background-image: url('../images/team/background_mission.png');
     background-size: cover;
 }
 
 #mission .image {
-    background-image: url('/images/gallery/photo25.jpg');
+    background-image: url('../images/gallery/photo25.jpg');
     background-size: cover;
 }
 
