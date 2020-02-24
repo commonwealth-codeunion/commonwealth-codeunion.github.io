@@ -44,7 +44,7 @@ body {
 
 #home h1, h2, h3 {
     text-transform: uppercase;
-    margin: 0.5em;
+    margin: 0.5em 0;
 }
 
 #home h1 {
@@ -271,6 +271,11 @@ footer p {
     color: #fff;
 }
 
+.welcome {
+    height: 100%;
+    background-color: #ffba5a;
+}
+
 @media screen and (max-width: 570px) {
     .main {
         text-align: center;
@@ -278,6 +283,9 @@ footer p {
     .main h1 {
         font-size: 2rem;
         padding: 10px;
+    }
+    .welcome h2 {
+        font-size: 1.5rem;
     }
 }
 
@@ -313,6 +321,9 @@ footer p {
     }
     .banner .ml-auto {
         margin: 0 auto;
+    }
+    .schedule img {
+        width: 4.5em;
     }
 }
 
