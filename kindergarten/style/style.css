@@ -276,7 +276,7 @@ footer p {
     background-color: #ffba5a;
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 668px) {
     .main {
         text-align: center;
     }
