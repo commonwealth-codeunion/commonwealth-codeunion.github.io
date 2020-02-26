@@ -271,11 +271,6 @@ footer p {
     color: #fff;
 }
 
-.welcome {
-    height: 100%;
-    background-color: #ffba5a;
-}
-
 @media screen and (max-width: 668px) {
     .main {
         text-align: center;

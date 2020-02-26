@@ -33,6 +33,21 @@
     margin-bottom: 1em;
 }
 
+.welcome {
+    height: 100%;
+    background-color: #ffba5a;
+    text-align: center;
+}
+
+.welcome .col-md-6, .col-md-12 {
+    text-align: start;
+}
+
+.welcome .col-md-6 img {
+    width: 100%;
+}
+
+
 @media screen and (max-width: 420px) {
     .staff {
         font-size: 1.3rem;

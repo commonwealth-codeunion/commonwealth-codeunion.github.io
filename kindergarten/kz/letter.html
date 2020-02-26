@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="kz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Алғы сөз | Балабақша №8</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/animate.css">
+    <link rel="stylesheet" href="../style/mind.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <script>
+        const noScroll = () => {
+            window.scroll(0, 0);
+        }
+
+        function loadData() {
+            return new Promise((resolve, reject) => {
+                window.addEventListener('scroll', noScroll);
+                window.addEventListener('load',
+                    () => resolve());
+            })
+        }
+
+        loadData()
+            .then(() => {
+                let preloaderEl = document.getElementById('preloader');
+                preloaderEl.classList.add('hidden');
+                preloaderEl.classList.remove('visible');
+                preloaderEl.style.backgroundImage = "none";
+                window.removeEventListener('scroll', noScroll);
+            });
+    </script>
+
+    <div id="preloader" class="visible"></div>
+
+    <a href="https://wa.me/77010389899" class="whatsapp-unique pulse">
+        <img src="../images/whatsapp.png" alt="" width="64">
+    </a>
+
+    <!-- nav start -->
+    <nav id="navbar" class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="../index.html"><img src="../images/logo.png" width="100"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="learning.html">Оқыту</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="growth.html">Даму</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="discipline.html">Тәртіп</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Көзқарасымыз
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="mind.html">Миссиямыз</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Алғы сөз</a>
+                    </div>
+                </li>
+                <li class="nav-item text-center" id="feedbackBtn">
+                    <a class="nav-link" href="index.html">Жазылу</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../ru/letter.html" class="nav-link"><img class="mr-3" src="../images/icons/russia.png"
+                            alt="" width="30">Рус</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- welcome start -->
+    <div class="welcome">
+        <div class="container pt-5 pb-5">
+            <img src="../images/quote.png" alt="" width="64">
+            <h2>Алғы сөз</h2>
+            <div class="row mt-5" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="col-md-6 wow fadeInUp">
+                    <img src="../images/team/Карибаева Кульдархан.JPG" alt="" class="card-img-top">
+                </div>
+                <div class="col-md-6 wow fadeInDown">
+                    <p>
+                        Еліміздің болашағы-жас ұрпақты тәрбиелеуде бірінші бесік-отбасы, ата-ана тәрбиесі болса, екінші
+                        бесік- білім беру мекемесі. Мектепке дейінгі кездегі тәрбие-адам қалыптасуының алғашқы
+                        баспалдағы. Бұл кезең бала табиғатына ерекше әсер етіп, оған өмір бойы өшпестей із
+                        қалдырады..Сондықтан тәрбие мәселесіне көңіл бөліп, болашақ ұрпақты саналы тәрбиелеу үшін тиімді
+                        әдіс-тәсілдерді қолдану әрбір мектепке дейінгі мекеме ұжымының тапқырлығы мен іскерлігін,
+                        ізденімпаздығы мен шығармашылығын талап етеді. Балабақшадағы тәрбие отбасынан берілген тәрбиені
+                        жалғастырып жандандырады. Ғұлама ойшыл Әбу-Насыр әл Фараби «Адамға ең бірінші білім емес, тәрбие
+                        берілуі керек, тәрбиесіз берілген білім адамзаттың қас жауы, ол келешекте адамзат өміріне апат
+                        әкеледі» деп ұрпақ тәрбиесіне жауапкершілікпен қарауды талап етеді.
+                    </p>
+                </div>
+                <div class="col-md-12 mt-5 wow fadeInUp">
+                    <p>
+                        Мектепке дейінгі тәрбие
+                        заман талабына сай тәрбие мен білім беру жұмысын кешенді ұйымдастыруды, жаңа технологияларды,
+                        идеялар мен шығармашылықты, инновациялық жаңашылдықты қажет етеді. Баланы заманына қарай
+                        икемдеп, өз заманының озық өнегесін санасына сіңіріп, оларды шығармашылық бағытта жан-жақты
+                        дамытуда МКҚК №8 Балабақша ұжымы да өз үлесін қосып түрлі жұмыстар атқарып жатыр. Балабақша 1981
+                        жылы типтік жобамен 340 балаға арналған 14 топ болып ашылды. Содан бері қаншама жас ұрпаққа
+                        білім мен тәрбие беріп, жүрегіне жылулық сыйлаған білім ұясына биыл 39 жыл болды. Осы жылдар
+                        ішінде балабақша қабырғасынан талай түлектер ұшып шықты. Сол уақыт аралығында алғашқы тәрбиені
+                        балабақшадан алып, білім нәрімен сусындаған бүлдіршіндер бүгінгі күні қала, облыс тіпті,
+                        елімізді көркейтуге өз үлестерін қосып жүр. Осы жылдар ішінде болашақ бала тәрбиесіне үлес
+                        қосқан қызметкерлер, бүгінде зейнеткерлік демалыста, сол кезден бүгінгі күнге дейін әлі де бала
+                        жанының бағбаны болып балабақшамен бірге жасап келе жатқан қызметкерлеріміз де бар.
+                        Балабақша 2011 жылы күрделі жөндеуден өтіп,жаңаша жабдықталып, бүгінгі таңда 14 қазақ тілді топ
+                        жұмыс жасап келеді. Ұжымда жалпы 57 қызметкер, оның ішінде 25 педагог қызметкер еңбек етуде.
+                        Балабақшамыздың оқу-тәрбие жұмыстары еліміздің жалпыға міндетті білім беру стандарты негізінде,
+                        жүйелі, өз деңгейінде жұмыс жасауда. Тәрбие саласын бүгінгі күн талабына сай ұйымдастыруды өз
+                        міндетіміз деп біліп, әр күнді балаларға қызықты өткізу мақсатында түрлі жаңа технологиялар,
+                        мәселен: құм, арт, ертегі, түс, асық терапияларын, Монтессори, ТРИЗ технологияларын қолдануда
+                        ұжым белсенділік танытуда.
+                        Қазіргі қоғам алдында тұрған өзекті мәселе жан-жақты дамыған, мәдениетті, шығармашыл, әлеуметке
+                        бейімделген тұлға қалыптастыру болса, соны іске асыруда ұжым болып аянбай еңбек етіп келеміз.
+                        Сол мақсатқа жету үшін бүгінде балалармен өз жас ерекшеліктеріне сай түрлі іс-шараларды
+                        ұйымдастырудамыз. Мысалы, жуырда Абай Құнанбайұлының 175-жылдығына орай ұйымдастырылған «Әдеби
+                        кеш» атты Абай өлеңдерін мәнерлеп жаттаудан байқау, Өзін-өзі тану онкүндігі аясында
+                        ұйымдастырылған іс-шаралар, спорттық жарыстар ұйымдастырдық, сондай-ақ «Skills akademy»;
+                        «Bilimger group» ЖШС, EVENT академиясының «Fantastic Talent» атты ұйымдастырған республикалық
+                        шығармашылық байқауларға да белсене қатысып, қанжығамызға жүлделі орындарды байлап келіп жүрміз.
+                        Осы шараларды ұйымдастыру барысында «Ұлттық кітапхана», мектеппен және басқа да мекемелермен
+                        ынтымақтастық жұмыстарын жасаймыз.
+                        Педагог қызметкерлер де өз білімін жетілдіру барысында «Назарбаев Зияткерлік мектептері» ДББҰ
+                        Педагогикалық шеберлік орталығы, «Өрлеу» БАҰО АҚ, «Нұр Болашақ» мектепке дейінгі ұйымдар одағы
+                        заңды» тұлғалар бірлестігі, «Халықаралық білім беруді дамыту академиясы» т.б. ұйымдарда
+                        курстардан өтіп біліктіліктерін үздіксіз арттыруда. Өз білімін шыңдау мақсатында түрлі байқаулар
+                        мен олимпиадаларға қатысып «Үздік тәрбиеші», «Жылдың үздік 100 ұстазы» төсбелгісіне ие болып,
+                        дипломдармен марапатталуда. Балабақшамыздың осындай жақсы нәтижелерге жетуі ұжымның бірлігі мен
+                        тұтастығының арқасы.
+                    </p>
+                    <p class="text-right">
+                        <br>
+                        <b><i>
+                                Сөзімді ғұлама ғалым ағартушы Ахмет Байтұрсынұлының «Басқадан кем болмас үшін біз
+                                білімді,
+                                бай
+                                һәм күшті болуымыз керек. Күшті болуға бірлік керек. Осы керектердің жолында жұмыс
+                                істеуіміз
+                                керек» деген сөзімен аяқтайын. Балабақшамыздың абыройын, мерейін асқақтата берейік!!!
+                            </i></b>
+                        <br>
+                        <br>
+                        <i>
+                            - Құрметпен, балабақша меңгерушісі, Карибаева Кульдархан Баймаханқызы
+                        </i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- welcome end -->
+
+    <!-- footer start -->
+    <footer class="text-center">
+        <p>Балабақша №8. Code Union командасымен құрылған.</p>
+    </footer>
+    <!-- footer end -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

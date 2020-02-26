@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="kz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Приветсвенное слово | Ясли-сад №8</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/animate.css">
+    <link rel="stylesheet" href="../style/mind.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <script>
+        const noScroll = () => {
+            window.scroll(0, 0);
+        }
+
+        function loadData() {
+            return new Promise((resolve, reject) => {
+                window.addEventListener('scroll', noScroll);
+                window.addEventListener('load',
+                    () => resolve());
+            })
+        }
+
+        loadData()
+            .then(() => {
+                let preloaderEl = document.getElementById('preloader');
+                preloaderEl.classList.add('hidden');
+                preloaderEl.classList.remove('visible');
+                preloaderEl.style.backgroundImage = "none";
+                window.removeEventListener('scroll', noScroll);
+            });
+    </script>
+
+    <div id="preloader" class="visible"></div>
+
+    <a href="https://wa.me/77010389899" class="whatsapp-unique pulse">
+        <img src="../images/whatsapp.png" alt="" width="64">
+    </a>
+
+    <!-- nav start -->
+    <nav id="navbar" class="navbar navbar-expand-xl navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="index.html"><img src="../images/logo.png" width="100"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="learning.html">Обучение</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="growth.html">Развитие</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="discipline.html">Дисциплина</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Взгляд
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="mind.html">Миссия</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Приветсвенное слово</a>
+                    </div>
+                </li>
+                <li class="nav-item text-center" id="feedbackBtn">
+                    <a class="nav-link" href="index.html">Записаться</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../kz/letter.html" class="nav-link"><img class="mr-3" src="../images/icons/kazakhstan.png"
+                            alt="" width="30">Қаз</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- welcome start -->
+    <div class="welcome">
+        <div class="container pt-5 pb-5">
+            <img src="../images/quote.png" alt="" width="64">
+            <h2>Приветсвенное слово</h2>
+            <div class="row mt-5" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="col-md-6 wow fadeInUp">
+                    <img src="../images/team/Карибаева Кульдархан.JPG" alt="" class="card-img-top">
+                </div>
+                <div class="col-md-6 wow fadeInDown">
+                    <p>
+                        Будущее страны - первая колыбель в воспитании подрастающего поколения, родительская колыбель и
+                        вторая колыбель в образовательном учреждении. Дошкольное воспитание находится на первом этапе
+                        развития человека. Этот период оказывает особое влияние на характер ребенка и оставляет на нем
+                        неизгладимый след до конца его жизни, поэтому пристальное внимание к проблеме воспитания и
+                        использования эффективных методов сознательного воспитания будущего поколения требует
+                        изобретательности, трудолюбия и творчества сотрудников каждого дошкольного
+                        учреждения. Воспитание в детском саду продолжает семья. Абу Наср аль-Фараби, великий
+                        мыслитель, требовал ответственного отношения к воспитанию, говоря: Воспитание должно быть на
+                        первом месте, а не образование; необразованность - враг человечества, которое в
+                        будущем поставит под угрозу человеческую жизнь».
+                    </p>
+                </div>
+                <div class="col-md-12 mt-5 wow fadeInUp">
+                    <p>
+                        Дошкольное образование требует комплексной
+                        организации современной учебно-воспитательной работы, новых технологий, идей и творчества,
+                        инноваций. Детский сад № 8 также способствует развитию ребенка, адаптируя его
+                        к духу хороших времен и творчески развивая его. Детский сад был открыт в 1981 году как стандарт
+                        для 14 групп из 340 детей. Это 39-й год со дня рождения этого поколения, которое дало столь
+                        многим молодым людям образование и воспитание. За эти годы многие выпускники покинули детский
+                        сад. Сегодня дети, получившие начальное образование в детских садах и получившие сегодня высшее
+                        образование, вносят значительный вклад в благоустройство города, региона и даже страны. На
+                        протяжении многих лет были работники, которые внесли свой вклад в воспитание наших детей
+                        , которые находятся на пенсии и до сих пор работают вместе с детским садом.
+                        Детский сад был отремонтирован в 2011 году, и в настоящее время действуют 14
+                        групп на казахском языке. Всего 57 сотрудников, в том числе 25 преподавателей. Воспитательная
+                        работа нашего детского сада работает системно, на уровне обязательного уровня образования
+                        страны. Команда активно участвует в использовании новейших технологий, таких Монтессори и
+                        технология TRIS, чтобы сделать повседневную
+                        организацию образования современной.
+                        Современное общество сталкивается с проблемой всесторонне развитой, адаптированной к
+                        культурному, творческому и социальному становлению личности, работает тяжело. С этой целью мы
+                        организуем мероприятия для детей всех возрастов для достижения
+                        их целей. Например, недавно мы организовали чтение стихов Абая «Литературный вечер», посвященных
+                        175-летию Абая Кунанбаева, мероприятий в рамках Десятилетия самопознания, спортивных
+                        соревнований, а также «Академии умений»; Мы также активно участвуем в национальных творческих
+                        конкурсах, организуемых ТОО «Группа Билимгер», «Фантастический талант» и Академия EVENT. Мы
+                        сотрудничаем с Национальной библиотекой, школами и другими учреждениями в организации этих
+                        мероприятий.
+                        По мере повышения квалификации учителей, Центр повышения квалификации АОО «Назарбаев
+                        Интеллектуальные школы», АО « НЦПК Орлеу », Ассоциация юридических лиц Союза дошкольных
+                        организаций« Нур Болашак »,« Международная академия развития образования » и др. Продолжение
+                        курсов повышения квалификации в организациях. Чтобы улучшить свои знания, они участвовали в
+                        различных конкурсах и были награждены значком «Лучший педагог», «100 лучших учителей
+                        года» и награждены дипломами. Успех нашего детского сада обусловлен единством и единством
+                        команды.
+                    </p>
+                    <p class="text-right">
+                        <br>
+                        <b><i>
+                                Как сказал известный ученый Ахмет Байтурсынов, "Мы должны быть образованными, богатыми и
+                                сильными. Чтобы быть сильным, нужно единство. Мы должны работать, чтобы удовлетворить
+                                эти
+                                потребности ". Давайте возвеличим честь и честь нашего детского сада !!!
+                            </i></b>
+                        <br>
+                        <br>
+                        <i>
+                            - С уважением, заведующая садиком, Карибаева Кульдархан Баймаханқызы
+                        </i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- welcome end -->
+
+    <!-- footer start -->
+    <footer class="text-center">
+        <p>Ясли Сад №8. Разработано студентами группы ТЗИ-19Р</p>
+    </footer>
+    <!-- footer end -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
