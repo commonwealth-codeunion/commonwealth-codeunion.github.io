@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Описание проекта</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/clever.css">
+</head>
+
+<body>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+                <h5 class="text-white h4">Clever</h5>
+                <span class="text-muted">Данная страница создана для удобста сбора всей информации в одно
+                    место.<br>После выполнения задачи прошу вас заполнить новые знания в эту страницу.</span><br><br>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mustToRead">
+                    Обязательно к прочтению
+                </button>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <a href="clever.html" class="navbar-brand">Code Union</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Что это?
+            </button>
+        </nav>
+    </div>
+    <div class="container-lg">
+        <div class="accordion mt-4" id="accordionExample">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link not-collapse-btn" type="button">
+                            <h5><a href="http://docs.cntd.ru/document/1200103663" title="Перейти на страницу"
+                                    target="_blank">ГОСТ Р 52872-2012</a>
+                            </h5>
+                        </button>
+                    </h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link not-collapse-btn" type="button">
+                            <h5><a href="https://www.w3.org/Translations/WCAG20-ru/WCAG20-ru-20130220/"
+                                    title="Перейти на страницу" target="_blank">WCAG (Международный Стандарт доступности
+                                    контента)</a>
+                            </h5>
+                        </button>
+                    </h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            <h5 title="Раскрыть..">Информация по адаптации под невзрячих людей</h5>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                            Чем меньше действий, тем лучше<br>
+                            Нужно сделать максимально простой интерфейс, чтобы пользователь не тратил своё время на
+                            изучение
+                            приложения.
+                            Он должен открыть его и услышать кратко, но чётко и понятно описание функции какой-либо
+                            кнопки.<br><br>
+
+                            Контраст<br>
+                            По м/у народному стандарту WCAG минимальный уровень контрастности основного цвета и фона
+                            в интерфейсах
+                            для
+                            невзрячих- 4.5:1. Контраст цвета шрифта - 3:1. Для проверки можно использовать два
+                            сервиса:
+                            <ul>
+                                <li><a href="https://Webaim.org" target="_blank">Webaim.org</a></li>
+                                <li><a href="https://leaverou.github.io/contrast-ratio"
+                                        target="_blank">Leaverou.github.io</a></li>
+                            </ul>
+
+                            <br>
+
+                            Размер шрифта<br>
+                            Гайдлайн Material Design в интерфейсах для слабовидящих рекомендует использовать шрифты
+                            не меньше 14pt
+                            жирный и от 18pt обычный.<br><br>
+
+                            Простые изображения<br>
+                            Главная задача картинок - быть простыми, понятными и различными. Сложные картинки с
+                            анимацией и прочим
+                            не
+                            нужны. Не оценят. <br><br>
+
+                            Никакой воды<br>
+                            Все тексты должны быть краткими, понятными и полезными. Чтобы ориентироваться в
+                            приложении невзрячие
+                            пользователи просушивают всю информацию на экране с помощью программного экранного
+                            доступа: TalkBack и
+                            VoiceOver.<br>
+                            Голосовое сопровождение должно информировать и помогать в навигации, но не утомлять.
+                            Чем короче текст, тем быстрее пользователи изучат интерфейс.<br><br>
+
+                            Описание для каждой кнопки и иконки<br>
+                            Они нуждаются в текстовом описании, чтобы программы экранного доступа могли объяснить
+                            пользователю,
+                            зачем
+                            нужны эти элементы и что с их помощью можно делать.<br>
+                            Гайдлайн google говорит, что подписи иконки должны указывать на их действие, а не на
+                            характеристику. Как
+                            в
+                            примере: "Редактировать", а не "Карандаш". <br><br>
+
+                            Иерархия в интерфейсе<br>
+                            Синтезатор речи озвучивает экран последовательно, поэтому информацию нужно преподнести
+                            логично с
+                            понятной
+                            последовательностью. <br><br>
+
+                            Тестирование<br>
+                            Попробуйте воспользоваться приложением не глядя с помощью TalkBack или VoiceOver. <br>
+                            Однако мы всё равно не сможем понять невзрячих, поэтому нам необходимо дать им
+                            протестировать приложение
+                            самим.
+                        </p>
+                        <p>Ссылки на источники:</p>
+                        <ul>
+                            <li><a href="https://vc.ru/design/30539-desyat-sovetov-po-sozdaniyu-prilozheniya-dlya-teh-kto-ne-vidit"
+                                    target="_blank">Опыт
+                                    разработки мобильного приложения под людей с особыми потребностями</a></li>
+                            <li><a href="https://habr.com/ru/post/347478/" target="_blank">Статья на habr.ru</a></li>
+                            <li><a href="https://speakerdeck.com/usabilitylab/diemo-otchiet-usabilitylab-o-sravnitiel-nom-issliedovanii-udobstva-mobil-nykh-bankovskikh-prilozhienii-plus-podarok-otchiet-ob-otsienkie-dostupnosti-intierfieisov?slide=4"
+                                    target="_blank">Отчет банка о проблемах при адаптации мобильного приложения</a></li>
+                            <li><a href="https://mobile-review.com/news/pochemu-mobilnye-prilozheniya-na-95-ne-adaptirovany-dlya-lyudej-s-ogranichennymi-vozmozhnostyami-zdorovya"
+                                    target="_blank">Роскачество</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true" aria-controls="collapseTwo">
+                            <h5 title="Раскрыть..">Адаптация под людей с нарушнием опорно-двигательного аппарата и
+                                аутистов</h5>
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                            Люди с данным нарушением, используют встроенную функцию в Android, Switch Access. Она
+                            позволяет
+                            взаимодействовать с экраном с помощью специального сканера.
+                            При нажатии на него, Switch Access начинает сканировать экран телефона. Для выбора
+                            выделенного
+                            красными рамками элемента следует ещё раз нажать на него.<br><br>
+
+                            Функция "Гид-доступ" на IOS помогает людям с нарушением двигательной активности или аутизмом
+                            сосредоточиться на приложении, а функциональность AVFoundation можно использовать для
+                            создания
+                            субтитров под аудио и видео контент.
+                        </p>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube-nocookie.com/embed/Y043N9VngwI?start=61" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Modals data-targets -->
+    <div class="modal fade" id="mustToRead" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Обязательно к прочтению</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Прошу вас осознанно читать информацию, которая есть на данной странице.<br>
+                        Если мы будем знать то над чем работаем, то проект взлетит с большей вероятностью.<br>
+                        Я постарался убрать всю воду и оставить только факты и необходимые знания для разработки идеи,
+                        дизайна, сайта и мобильного приложения.<br>
+                        Спасибо!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Окей</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

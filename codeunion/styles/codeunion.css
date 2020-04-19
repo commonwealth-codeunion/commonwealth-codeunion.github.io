@@ -1,0 +1,14 @@
+a {
+    text-decoration: none;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.project img {
+    width: 300px;
+    height: 300px;
+}
