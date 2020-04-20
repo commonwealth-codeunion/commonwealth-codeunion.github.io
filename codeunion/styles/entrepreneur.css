@@ -1,0 +1,13 @@
+table tr th, table tr td {
+    padding: 20px;
+    width: 50%;
+}
+
+.table-headings {
+    background-color: #1f60a5;
+    color: white;
+}
+
+.table-subtitle {
+    font-weight: lighter;
+}
